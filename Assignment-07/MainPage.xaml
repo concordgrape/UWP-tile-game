@@ -1,0 +1,88 @@
+﻿ <!--
+* FILE : MainPage.xaml
+* PROJECT : PROG2121 - Assignment 07
+* PROGRAMMER : Sky Roth
+* FIRST VERSION: 2020 - 01 - 16
+* DESCRIPTION : This program will design the main page of the program using XAML
+-->
+    
+    
+    <Page
+    x:Class="Assignment_07.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment_07"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    MaxWidth="1580"
+    MaxHeight="1140"
+    Background="White"
+    RequestedTheme="Light"
+    BorderBrush="White" Height="1140" Width="1580">
+
+    <Canvas Margin="0,0,748,474" x:Name="canvas">
+
+        <!-- The grid that will be used for the game -->
+        <Grid x:Name='puzzle_game' Background="WhiteSmoke" BorderBrush="CornflowerBlue" BorderThickness="20" Height="500" Width="500" Margin="250,0,0,0" Canvas.Left="10" Canvas.Top="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Column1"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Buttons that will be clicked -->
+            <Button x:Name="btn_1" Content="1" Grid.Row="0" Grid.Column="0" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_2" Content="2" Grid.Row="0" Grid.Column="1" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_3" Content="3" Grid.Row="0" Grid.Column="2" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_4" Content="4" Grid.Row="0" Grid.Column="3" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_5" Content="5" Grid.Row="1" Grid.Column="0" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_6" Content="6" Grid.Row="1" Grid.Column="1" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_7" Content="7" Grid.Row="1" Grid.Column="2" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_8" Content="8" Grid.Row="1" Grid.Column="3" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_9" Content="9" Grid.Row="2" Grid.Column="0" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_10" Content="10" Grid.Row="2" Grid.Column="1" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_11" Content="11" Grid.Row="2" Grid.Column="2" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_12" Content="12" Grid.Row="2" Grid.Column="3" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_13" Content="13" Grid.Row="3" Grid.Column="0" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_14" Content="14" Grid.Row="3" Grid.Column="1" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_15" Content="15" Grid.Row="3" Grid.Column="2" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="CornflowerBlue" VerticalAlignment="Top"/>
+            <Button x:Name="btn_E" Grid.Row="3" Grid.Column="3" FontSize="40" Height="100" Width="100" Margin="10,11,0,0" Foreground="Black" Click="box_Click" Background="WhiteSmoke" VerticalAlignment="Top"/>
+
+        </Grid>
+        
+        <!-- Prompts -->
+        <Button x:Name="shuffleBtn" Content="Shuffle Board" Click="shuffleBtn_Click" Margin="450,11,0,0" Background="#edbc64" Canvas.Left="-184" Canvas.Top="505" />
+        <TextBox TextWrapping="Wrap" Foreground="#edbc64" Width="207" Canvas.Left="23" Canvas.Top="65" PlaceholderText="Enter Your Name" Name="enterNameTxtBox"/>
+        <TextBlock Canvas.Left="23" Canvas.Top="20" Text="Leaderboard" TextWrapping="Wrap" FontSize="30"/>
+        <Button x:Name="nameBtn" Content="Submit" Margin="450,11,0,0" Background="#edbc64" Canvas.Left="-302" Canvas.Top="100" Height="30" Width="80" FontSize="10" Click="nameBtn_Click"/>
+
+        <TextBlock Canvas.Left="669" Canvas.Top="512" Text="0" TextWrapping="Wrap" Foreground="CornflowerBlue" FontWeight="ExtraBold" FontSize="30" Name="totalClicksLbl"/>
+        <TextBlock Canvas.Left="74" Canvas.Top="481" Text="0:00" TextWrapping="Wrap" Foreground="CornflowerBlue" FontWeight="ExtraBold" FontSize="50" Name="timerLbl"/>
+        <TextBlock Canvas.Left="28" Canvas.Top="102" TextWrapping="Wrap" Name="playerNamePromptTxt" FontSize="10" Foreground="CornflowerBlue"/>
+
+        <TextBlock Canvas.Left="23" Canvas.Top="150" Text="Player Name" TextWrapping="Wrap" FontSize="10"/>
+        <TextBlock Canvas.Left="148" Canvas.Top="150" Text="Score" TextWrapping="Wrap" FontSize="10"/>
+        <TextBlock Canvas.Left="206" Canvas.Top="150" Text="Time" TextWrapping="Wrap" FontSize="10"/>
+
+        <StackPanel x:Name="leaderboardPanel" Width="220" Height="300" Margin="20,150,0,0" Canvas.Top="40">
+            <TextBlock Canvas.Left="23" Canvas.Top="241" Text="{Binding Name}" TextWrapping="Wrap" Foreground="Black" Name="scoreBoard"/>
+        </StackPanel>
+        <TextBlock Canvas.Left="440" Canvas.Top="512" Text="Total Clicks:" TextWrapping="Wrap" Foreground="CornflowerBlue" FontWeight="ExtraBold" FontSize="30" x:Name="totalClicksLbl_Copy"/>
+        
+        <TextBlock Canvas.Left="266" Canvas.Top="578" Text="Thanks for coming back, continue with this game?" TextWrapping="Wrap" Foreground="CornflowerBlue" FontSize="15" Name="ReturnPromptLbl" Visibility="Collapsed"/>
+        <Button x:Name="Continue" Content="Continue" Click="Continue_Click" Margin="450,11,0,0" Background="#edbc64" Canvas.Left="-162" Canvas.Top="604" Visibility="Collapsed"/>
+        <Button x:Name="Restart" Content="Restart" Click="shuffleBtn_Click" Margin="450,11,0,0" Background="#edbc64" Canvas.Left="62" Canvas.Top="604" Visibility="Collapsed" />
+
+        <TextBlock Canvas.Left="266" Canvas.Top="578" TextWrapping="Wrap" Foreground="CornflowerBlue" FontSize="25" Name="winnerPromptLbl"  Text="Congrats, you won! Click Shuffle to play again!" Visibility="Collapsed"/>
+
+    </Canvas>
+
+</Page>
